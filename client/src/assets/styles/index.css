@@ -8,3 +8,7 @@
   --yellow:#FFD56F;
   --green: #939B62;
 }
+@viewport{
+  width: 1440px;
+  height: 900px;
+}

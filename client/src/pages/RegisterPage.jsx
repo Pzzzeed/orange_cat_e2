@@ -4,46 +4,80 @@ import Layout from '../components/Layout';
 import '../assets/styles/Register.css'
 
 function FormRegister(){
-const [allInput,setAllInput] = useState({
-photo:'',
-userName:'',
-email:'',
-password:0,
-confirmPass:0,
-gender:''
+const [photo,setPhoto] = useState('')
+const [userName,setUserName] = useState('')
+const [email,setEmail] = useState('')
+const [password,setPassword] = useState(null)
+const [confirmPassword,setConfirmPassword] = useState(null)
+const [gender,setGender] = useState('')
+const [inputs,setInputs] = useState([])
+
+console.log({inputs})
+const inputPhoto = (event) =>{
+    setPhoto(event.target.value)
+    console.log({photo})
 }
-    
-)
-
-
-const inputAllForm= () =>{
-    console.log('img')
+const inputUsername = (event) =>{
+    setUserName(event.target.value)
+    console.log({userName})
 }
-
+const inputEmail = (event) =>{
+    setEmail(event.target.value)
+    console.log({email})
+}
+const inputPassword = (event) =>{
+    setPassword(event.target.value)
+    console.log({password})
+}
+const inputConfirmPassword = (event) =>{
+    setConfirmPassword(event.target.value)
+    console.log({confirmPassword})
+}
+const inputGender = (event) =>{
+    setGender(event.target.value)
+    console.log({gender})
+}
+const saveInput = (event) =>{
+    event.preventDefault()
+    const data={
+        photo:photo,
+        userName:userName,
+        email:email,
+        password:password,
+        confirmPassword:confirmPassword,gender:gender
+    }
+    setInputs({...data})
+  setPhoto('')
+  setUserName('')
+  setEmail('')
+  setPassword(null)
+  setConfirmPassword(null)
+  setGender('')
+}
     return(
         <Layout>
-       <section className='full'>
+       <section className='fullpage'>
         <div className ="left-form">
 
         <div className ="form">
         <h1>Register</h1>
         <div className='wrap'>
-        <input onChange={inputAllForm} className='photo' type='file'/><br/>
+        <input onChange={inputPhoto} className='photo' type='file'/><br/>
         </div>
         
         <label>Username* :</label><br/>
-<input onChange={inputAllForm} type='text'className='input'/><br/>
+<input onChange={inputUsername} value={userName} type='text'className='input'/><br/>
 <label>Email* :</label><br/>
-<input onChange={inputAllForm} type='email'className='input'/><br/>
+<input onChange={inputEmail}  value={email} type='email'className='input'/><br/>
 <label>Password* :</label><br/>
-<input onChange={inputAllForm} type='password'className='input'/><br/>
+<input onChange={inputPassword} value={password} type='password'className='input'/><br/>
 <label>Confirm Password* :</label><br/>
-<input onChange={inputAllForm} type='password'className='input'/><br/>
+<input onChange={inputConfirmPassword} value={confirmPassword} type='password'className='input'/><br/>
 <div className='radio'>
-<input onChange={inputAllForm} type='radio' name='gender'/><label>Male</label>
-<input onChange={inputAllForm} type='radio' name='gender'/><label>Female</label><br/>
+<input onChange={inputGender} value='male' name ="genger" id="1" type='radio'/><label>Male</label>
+<input onChange={inputGender} type='radio' name ="genger" id="2" value='female'/><label>Female</label><br/>
 </div>
-<button className='btn'>SAVE</button>
+<button onClick={(saveInput)} className='btn'>SAVE</button>
 </div>
         </div>
         <div className ="right">
