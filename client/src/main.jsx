@@ -5,6 +5,7 @@ import "./assets/styles/index.css";
 import "./assets/styles/login.css";
 import { BrowserRouter } from "react-router-dom";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>

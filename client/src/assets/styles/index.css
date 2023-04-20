@@ -2,4 +2,9 @@
 
 #root {
   font-family: "Sono", sans-serif;
+  --textColor: aliceblue;
+  --orange:  #FF7B54;
+  --oryellow:#FFB26B;
+  --yellow:#FFD56F;
+  --green: #939B62;
 }
