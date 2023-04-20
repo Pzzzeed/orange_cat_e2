@@ -5,8 +5,8 @@ import Footer from "../components/Footer";
 const HomePage = () => {
   return (
     <div>
-      <NavBar />
-      <div>HomePage</div>
+      
+      <div></div>
       <Footer />
     </div>
   );
