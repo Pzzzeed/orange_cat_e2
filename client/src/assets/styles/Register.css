@@ -81,13 +81,21 @@ label{
     height: 200px;
     width: 200px;
     position: relative;
-    border: 5px solid #fff;
+    /* border: 5px solid #fff; */
 border-radius: 50%;
-background: url('/public/Login_logo.png');
+/* background: url('/public/Login_logo.png'); */
 background-size: 100% 100%;
 margin: auto;
 /* z-index: -1; */
 
+}
+#profilePhoto{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px; 
+    border-radius: 50%;
+    margin: auto;
+    z-index:1;
 }
 .radio{
     display: flex;

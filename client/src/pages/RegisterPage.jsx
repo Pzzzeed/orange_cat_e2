@@ -12,14 +12,20 @@ const [confirmPassword,setConfirmPassword] = useState(null)
 const [gender,setGender] = useState('')
 const [inputs,setInputs] = useState([])
 
+   console.log({photo})
+
 console.log({inputs})
-const inputPhoto = (event) =>{
-    setPhoto(event.target.value)
-    console.log({photo})
+const inputPhoto = (event) =>{  
+  if(event.target.files.length>0){
+    var src= URL.createObjectURL(event.target.files[0])
+    var preview = document.getElementById('profilePhoto')
+    preview.src = src
+setPhoto(event.target.preview.src)
+  }
 }
 const inputUsername = (event) =>{
     setUserName(event.target.value)
-    console.log({userName})
+    // console.log({userName})
 }
 const inputEmail = (event) =>{
     setEmail(event.target.value)
@@ -46,8 +52,9 @@ const saveInput = (event) =>{
         password:password,
         confirmPassword:confirmPassword,gender:gender
     }
+    console.log({data})
     setInputs({...data})
-  setPhoto('')
+//   setPhoto('')
   setUserName('')
   setEmail('')
   setPassword(null)
@@ -62,7 +69,7 @@ const saveInput = (event) =>{
         <div className ="form">
         <h1>Register</h1>
         <div className='wrap'>
-        <input onChange={inputPhoto} className='photo' type='file'/><br/>
+        <input onChange={inputPhoto} className='photo' type='file'/><img id='profilePhoto' src={photo} style={{display:"inline"}}/><br/>
         </div>
         
         <label>Username* :</label><br/>
