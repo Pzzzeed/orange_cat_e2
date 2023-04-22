@@ -6,6 +6,8 @@ import "./assets/styles/login.css";
 import HomePage from "./pages/HomePage";
 import { Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
+import FormRegister from "./pages/RegisterPage"
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<FormRegister/>} />
       </Routes>
     </div>
   );
