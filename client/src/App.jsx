@@ -7,7 +7,7 @@ import HomePage from "./pages/HomePage";
 import { Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import FormRegister from "./pages/RegisterPage"
-
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<FormRegister/>} />
+        <Route path="/landing" element={<LandingPage/>} />
       </Routes>
     </div>
   );
