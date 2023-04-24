@@ -3,6 +3,8 @@ import '../assets/styles/NavBar.css'
 const NavBar = () => {
 const [navAfter,setNavAfter] = useState(false)
 
+
+/* a call function for */
 const toggle = () =>{
 var toggleNav = document.getElementById('nav-menu')
 if(toggleNav.style.display === 'none'){
