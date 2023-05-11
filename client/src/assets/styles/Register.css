@@ -9,25 +9,21 @@
 body{
     /* background-image: linear-gradient(var(--oryellow),var(--green)); */
     /* font-size: large; */
-    font-size: 1.5rem;
+    font-size: 1rem;
     width: 1440px;
     height: 100%;
     
     
 }
 
-/* .full {
-    
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-} */
+
 .fullpage{
     display: flex;
     align-items: center;
     width: 100vw;
     background-image: linear-gradient(var(--oryellow),var(--green));
 }
+
 .left-form{
     display: flex;
     flex-direction: column;
@@ -45,21 +41,24 @@ body{
     margin-top: 15%;
     margin-bottom: 15%;
     height: auto;
-    padding: 7%;
+    text-align: center;
+    /* padding: 7%; */
     
 }
 .input{
     background-color: transparent;
     border-radius: 8px;
     border: solid gray 1px;
-    width: 60%;
-    line-height: 50px;
+    width: 40%;
+    height: 2rem;
     font-family: "Sono", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
+  
 }
+
 label{
     font-family: "Sono", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 .right{
@@ -81,9 +80,9 @@ label{
     height: 200px;
     width: 200px;
     position: relative;
-    /* border: 5px solid #fff; */
+       
 border-radius: 50%;
-/* background: url('/public/Login_logo.png'); */
+background: url('/public/Login_logo.png');
 background-size: 100% 100%;
 margin: auto;
 /* z-index: -1; */
@@ -104,12 +103,13 @@ margin: auto;
     height: auto;
     text-align: center;
     gap: 2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 input[type="radio"]{
     width: 25px;
 
 }
+
 
 .photo{
     position: absolute;
